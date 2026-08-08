@@ -1,30 +1,48 @@
 # SmartCV Application Kit
 
-A Codex skill for producing truthful, downloadable job-application materials from a job posting and a candidate's supplied CV.
-Instead, I created a clear prompt/skill file that job seekers can use while keeping their own information under control (It's not my job, but I took into consideration the needs and demands of my close circle - Turkish friends :)).
+Free, copy-and-paste prompts that help job seekers analyse a role, tailor a CV, and write a cover letter with ChatGPT, Claude, Gemini, or Codex.
 
-## What it creates
+## Why this exists
 
-- Recruiter-style screening report with an honest match score out of 100
-- Tailored CV/resume that preserves the source CV's design
-- Cover or motivation letter in the posting's language
+Job seekers should not need a paid CV application to get structured, honest help. This kit works with the AI account they already use and keeps the candidate in control of what they share.
 
-The skill never invents experience, metrics, qualifications, or eligibility details.
+The prompts are designed to **never invent** experience, metrics, qualifications, or work-authorisation details. They surface gaps clearly and use `[to confirm]` or `[add metric]` where information is missing.
 
-## Install
+## Start here
 
-From Codex, ask to install this GitHub repository as a skill, or run the skill installer with this repository URL:
+1. Choose a file in [`prompts/`](./prompts).
+2. Copy its prompt into ChatGPT, Claude, Gemini, or Codex.
+3. Paste or upload your current CV and the target job posting when the prompt asks.
+4. Review every output before using it in an application.
 
-```text
-https://github.com/muharremgezer/smartcv-application-kit
-```
+No account, extension, API key, or paid tool is required beyond access to your chosen AI assistant.
 
-## Structure
+## Prompt library
 
-- `SKILL.md` — core workflow and rules
-- `references/` — scoring, CV tailoring, and letter specifications
-- `scripts/render_html_to_pdf.py` — optional HTML-to-PDF CV renderer
+| Goal | Prompt |
+| --- | --- |
+| Understand your fit before applying | [`01-job-fit-analysis.md`](./prompts/01-job-fit-analysis.md) |
+| Tailor your existing CV without exaggeration | [`02-tailor-cv.md`](./prompts/02-tailor-cv.md) |
+| Write a tailored cover or motivation letter | [`03-cover-letter.md`](./prompts/03-cover-letter.md) |
+| Create all three deliverables in one guided flow | [`04-full-application-kit.md`](./prompts/04-full-application-kit.md) |
 
-## Requirements
+## Works with ChatGPT, Claude, and Gemini
 
-The PDF renderer needs `weasyprint`; page-count reporting additionally uses `pypdf` when available.
+The files are plain Markdown prompts, not platform-specific code. Paste one into a new chat, then provide the requested materials. If your AI assistant supports attachments, upload your CV and job-posting files; otherwise paste their text.
+
+Use the job posting's language by default. Tell the assistant if you want the output in another language.
+
+## Privacy and accuracy
+
+- Share only information you are comfortable providing to the selected AI service.
+- Remove contact details or identifiers before pasting if you prefer.
+- Do not claim skills, results, credentials, or work eligibility you cannot support.
+- Treat the output as a draft and verify every fact before submission.
+
+## Codex support
+
+[`SKILL.md`](./SKILL.md) remains available as an optional Codex integration. The main product of this repository is the portable prompt library above.
+
+## Contributing
+
+Suggestions for clearer prompts, better accessibility, additional languages, and realistic job-search workflows are welcome through issues or pull requests.
